@@ -5,6 +5,7 @@ function ShopAntClient({ path }) {
   const _state = { promise: null }
 
   const client = axios.create()
+  self.client = client
 
   self.call = function call(method, params) {
     return client.post(path, { method, params }).then(response => {
